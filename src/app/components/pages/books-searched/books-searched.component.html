@@ -1,0 +1,17 @@
+<!--<ul>-->
+<!--  <li *ngFor="let books of x">-->
+<!--    <img src="{{books.volumeInfo.imageLinks.thumbnail}}" alt="">-->
+<!--  </li>-->
+<!--</ul>-->
+<!--    books.volumeInfo.imageLinks.thumbnail   -->
+
+<div class="container mb-5 mt-5">
+  <div class="row align-items-end">
+    <div class="col-md-3 text-center" *ngFor="let books of x">
+      <img src="{{books.volumeInfo.imageLinks.thumbnail}}"  alt="list of books" class="mt-5" id="bookImg">
+      <div class="bookDescription">
+        <small>Author: {{books.volumeInfo.authors}}</small>
+      </div>
+    </div>
+  </div>
+</div>

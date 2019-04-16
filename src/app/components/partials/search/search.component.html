@@ -2,21 +2,10 @@
   <h1>Search for a book.</h1>
   <div class="row">
     <div class="col-md-6">
-      <form>
+      <form (ngSubmit)="searchBook(userInput)">
         <div class="form-group">
           <label for="">Book Title:</label>
-          <input type="text" class="form-control" name="book-title">
-          <button class="btn btn-primary mt-3 btn-block d-md-none"><i class="fas fa-search"></i>&nbsp;Search</button>
-          <button class="btn btn-primary mt-3 d-none d-sm-none d-md-block"><i class="fas fa-search"></i>&nbsp;Search</button>
-        </div>
-      </form>
-    </div>
-    <div class="col-md-6">
-      <hr class="d-block  d-sm-block d-md-none">
-      <form>
-        <div class="form-group">
-          <label for="">Book ISBN:</label>
-          <input type="text" class="form-control" name="book-isbn">
+          <input type="text" class="form-control" name="book-title" [(ngModel)]="userInput">
           <button class="btn btn-primary mt-3 btn-block d-md-none"><i class="fas fa-search"></i>&nbsp;Search</button>
           <button class="btn btn-primary mt-3 d-none d-sm-none d-md-block"><i class="fas fa-search"></i>&nbsp;Search</button>
         </div>
@@ -24,3 +13,6 @@
     </div>
   </div>
 </div>
+
+
+<app-books-searched [x]="booksArray"></app-books-searched>
